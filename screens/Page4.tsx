@@ -17,7 +17,6 @@ const Page4 = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Page 1</Text>
             <TextInput 
                 style={styles.input}
                 placeholder="Type your Name here"

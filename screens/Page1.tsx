@@ -16,12 +16,13 @@ const Page1 = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.headerText}>Image Generator</Text>
+            
+            <Text style={styles.headerText}>Cat Gif Generator</Text>
             <View style={styles.content}>
                 <Image 
                     source={{ uri: url }} 
                     style={styles.imageWrapper} 
-                    onLoad={handleImageLoad}
+                    onLoadEnd={handleImageLoad}
                 />
                 {isLoading && (
                     <ActivityIndicator size="large" color="#8882d9" style={styles.activityIndicator} />
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 10,
         borderRadius: 10,
-        marginTop: 20,
+        marginBottom: 20,
     },
     buttonText :{
         fontSize: 20,
