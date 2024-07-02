@@ -9,10 +9,10 @@ const HomePage = ({navigation} : any) => {
         <Text style= {styles.headerText}>HomePage</Text>
         <View style= {styles.content}>
             <Button title="Go to Page 1" onPress={() =>{navigation.navigate('Page1')}}/>
-            <Button title="Go to Page 2" onPress={() =>{}}/>
+            <Button title="Go to Page 2" onPress={() =>{navigation.navigate('Page2')}}/>
             <Button title="Go to Page 3" onPress={() =>{navigation.navigate('Page3')}}/>
-            <Button title="Go to Page 4" onPress={() =>{}}/>
-            <Button title="Go to Page 5" onPress={() =>{}}/>
+            <Button title="Go to Page 4" onPress={() =>{navigation.navigate('Page4')}}/>
+            <Button title="Go to Page 5" onPress={() =>{navigation.navigate('Page5')}}/>
 
         </View>
         </SafeAreaView>
