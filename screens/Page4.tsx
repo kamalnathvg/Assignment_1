@@ -1,35 +1,34 @@
-// Text Input app
-
-import React, {useState } from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import React, { useState } from "react";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 const Page4 = () => {
     const [text, setText] = useState('');
 
-    const GetGreeting = ({text } : any) => {
-        if(text !== ""){
+    const GetGreeting = ({ text }) => {
+        if (text !== "") {
             return (
-            <Text style={styles.outputText}>Hello, {text} </Text>
-            ) 
+                <Text style={styles.outputText}>Hello, {text}</Text>
+            )
         }
-        
+        return null;
     }
 
     return (
         <View style={styles.container}>
-            <TextInput 
-                style={styles.input}
-                placeholder="Type your Name here"
-                onChangeText={setText}
-                value={text}
-            />
-            <GetGreeting text = {text} />
-           
-            <TouchableOpacity style = {styles.button} onPress={() => setText('')}>
-                <Text style={styles.button}> Reset </Text> 
-            </TouchableOpacity>
+            <Text style={styles.headerText}>Greeting Generator</Text>
+            <View style={styles.content}>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Type your Name here"
+                    onChangeText={setText}
+                    value={text}
+                />
+                <GetGreeting text={text} />
+                <TouchableOpacity style={styles.button} onPress={() => setText('')}>
+                    <Text style={styles.buttonText}>Reset</Text>
+                </TouchableOpacity>
+            </View>
         </View>
-
     );
 
 };
@@ -37,13 +36,18 @@ const Page4 = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 16,
+        paddingHorizontal: 16,
     },
-    title: {
+    headerText: {
         fontSize: 28,
-        marginBottom: 20,
+        fontWeight: 'bold',
+        marginTop: 40, 
+        alignSelf: 'center', 
+    },
+    content: {
+        flex: 1,
+        justifyContent: 'center', 
+        alignItems: 'center',
     },
     input: {
         height: 40,
@@ -55,15 +59,21 @@ const styles = StyleSheet.create({
     },
     outputText: {
         marginTop: 20,
-        fontSize: 16,
+        fontSize: 26,
+        fontWeight: 'bold',
     },
     button: {
-      backgroundColor: '#1e90ff',
-      padding: 15,
-      borderRadius: 8,
-      marginTop: 20,
+        backgroundColor: '#8882d9',
+        paddingVertical: 15,
+        paddingHorizontal: 30,
+        borderRadius: 8,
+        marginTop: 20,
     },
-    
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
 });
 
 export default Page4;

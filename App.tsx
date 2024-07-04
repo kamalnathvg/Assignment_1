@@ -2,17 +2,18 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import HomePage from './screens/HomePage';
 import RandomImageGenerator from './screens/Page1';
-import Page3 from './screens/Page3';
-import Page1 from './screens/Page1';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-
-const Stack = createNativeStackNavigator()
-// import Page2 from './screens/Page2';
-// import Page4 from './screens/Page4';
 import Page5 from './screens/Page5';
 import Page2 from './screens/Page2';
 import Page4 from './screens/Page4';
+import Page3 from './screens/Page3';
+import Page1 from './screens/Page1';
+
+
+
+const Stack = createNativeStackNavigator()
+
 
 
 export default function App() {

@@ -64,12 +64,13 @@ const styles = StyleSheet.create({
         fontSize: 30,
         alignSelf: 'center',
         marginBottom: 20,
-        color: '#06859c'
+        color: '#000',
+        fontWeight: 'bold',
     },
     listItemWrapper: {
         paddingVertical: 10,
         paddingHorizontal: 10,
-        backgroundColor: '#94deeb',
+        backgroundColor: '#8882d9',
         marginVertical: 5,
         borderRadius: 5,
     },
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
     },
     buttonWrapper: {
         alignSelf: 'center',
-        backgroundColor: '#06859c',
+        backgroundColor: '#8882d9',
         paddingHorizontal: 20,
         paddingVertical: 10,
         borderRadius: 10,
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 20,
         color: 'white',
+        fontWeight: 'bold',
     },
 });
 
